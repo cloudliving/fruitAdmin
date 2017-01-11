@@ -1,0 +1,36 @@
+extends ../components/layout.pug
+
+block title
+	title 消息管理
+
+block hdQuote
+	link(rel="stylesheet", href="../css/msg.styl")
+
+block ctn
+
+	p.total 共发送消息125条, 本月发送8条
+
+	ul.msg-list
+		li.msg-list-item
+			a(href="")
+				div.flex.aic
+					div
+						img.msg-list-item-thumb(src="../images/default.png")
+					div.msg-list-item-main.flex-1
+						p.msg-list-item-title 多冷啊！我在东北玩泥巴~
+						p.small.soft 2017.1.24 15:27
+					div
+						img.msg-list-item-status(src="../images/success.png")
+
+		li.msg-list-item
+			a(href="")
+				div.flex.aic
+					div
+						img.msg-list-item-thumb(src="../images/default.png")
+					div.msg-list-item-main.flex-1
+						p.msg-list-item-title 多冷啊！我在东北玩泥巴~
+						p.small.soft 2017.1.24 15:27
+					div
+						img.msg-list-item-status(src="../images/warnning.png")
+
+	a.create(href="#") 新建消息

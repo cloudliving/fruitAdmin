@@ -1,0 +1,42 @@
+extends ../components/layout.pug
+
+block title
+	title 通讯录
+
+block hdQuote
+	link(rel="stylesheet", href="../css/userInfo.styl")
+
+block ctn
+
+	// 用户信息
+	.header
+		div
+			img.header-avatar(src="../images/avatar.png")
+			p.header-name 王大锤
+			p.header-identify 云智社区 第二十网格员
+
+	// 用户属性
+	ul.user-attr
+		li.user-attr-item
+			p.user-attr-key 手机
+			p.user-attr-val 18345678912
+		li.user-attr-item
+			p.user-attr-key 地址
+			p.user-attr-val 武汉市江岸区工农兵路
+
+	// 标签
+	ul.tags
+		li.tags-item(style="background: #FFCF06") 女性
+		li.tags-item(style="background: #A9E071") 未婚
+		li.tags-item(style="background: #5FDDCD") 20-30岁
+		li.tags-item(style="background: #FCAB52") 志愿者
+		li.tags-item(style="background: #a5a3e7") 外来人口
+
+	button.addTags + 添加标签
+
+	// operate
+	div.operate
+		div.operate-item
+			a.operate-link(href="#") <img class="operate-icon" src="../images/icon-phone.png"> 打电话
+		div.operate-item
+			a.operate-link(href="#") <img class="operate-icon" src="../images/icon-wx.png"> 发微信

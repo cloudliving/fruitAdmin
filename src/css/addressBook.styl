@@ -1,0 +1,72 @@
+@import '../mixin/index'
+
+.header
+	position relative
+	z-index 1
+	height 50px
+	line-height 50px
+	background #39ccd7
+	color #fff
+	text-align center
+
+	&-icon
+		position relative
+		top -.03rem
+		width .22rem
+		margin-left 5px
+
+.classes-btn
+	padding 5px 12px
+	color #fff
+	
+	&:active
+		background #2eb0ba
+
+.classes
+	display none
+	position absolute
+	left 50%
+	width 115px
+	transform translateX(-50%) !important
+	color #333
+	background #fff
+	box-shadow 0 0 32px 0px rgba(0,0,0,.06)
+
+	&:after
+		position absolute
+		content ''
+		top -8px
+		left 50%
+		margin-left -8px
+		width 17px
+		height 9px
+		background url(../images/addressBook-icon-1.png)
+	
+	&-item
+		border-bottom 1px solid #f0eff5
+
+// 搜索
+.search
+	padding .15rem .25rem
+	background #f0eff5
+
+	&-wrap
+		background #fff
+		border 1px solid #ecebf1
+		align-items center
+		border-radius 4px
+
+	&-input
+		flex 1
+		padding 10px 15px
+		border none
+		color #888
+		font-size 14px
+
+	&-icon
+		width 18px
+		margin 0 15px
+
+
+// users
+users()
