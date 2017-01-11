@@ -1,0 +1,23 @@
+extends ../components/layout.pug
+
+block title
+	title 登录
+
+block hdQuote
+	link(rel="stylesheet", href="../css/login.styl")
+
+block ctn
+	div.wrap
+		p.tac.mbauto
+			img.logo(src="../images/logo.png")
+
+		form.form.tac
+			p.form-item.mb10 用户名
+				input.form-input
+			p.form-item 密码
+				input.form-input(type="password")
+
+			input.form-btn(type="submit" value="登录")
+
+		p.forget
+			a.forget-link(href="#") 忘记密码

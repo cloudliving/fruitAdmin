@@ -1,0 +1,75 @@
+extends ../components/layout.pug
+
+block hdQuote
+	link(rel="stylesheet", href="../css/index.styl")
+
+block ctn
+	// 用户信息
+	.header
+		div
+			img.header-avatar(src="../images/avatar.png")
+			p.header-name 王大锤
+			p.header-identify 云智社区 第二十网格员
+
+	// 信息管理 共建平台 意见反馈
+	ul.links
+		li.links-item
+			a
+				img.links-item-icon(src="../images/index-1.png")
+				p 信息管理
+		li.links-item
+			a
+				img.links-item-icon(src="../images/index-2.png")
+				p 共建平台
+		li.links-item
+			a
+				img.links-item-icon(src="../images/index-3.png")
+				p 意见反馈
+
+	// 用户属性
+	div.attr
+		div.attr-ranking
+			p <span class="attr-ranking-circle"></span>	
+			p.small.soft 平均排名
+			p.attr-ranking-val 1512
+
+		// 百分比设置到 data-percent 属性上
+		div.attr-gather.m-loop(data-percent="80")
+			div.m-loop-wrap.m-loop-wrap-left
+				div.m-loop-ctn.m-loop-ctn-left
+			div.m-loop-wrap.m-loop-wrap-right
+				div.m-loop-ctn.m-loop-ctn-right
+
+			div
+				p.attr-gather-percent 80%
+				p.small.soft 用户收录率
+
+		div.attr-time
+			p <span class="attr-time-circle"></span>	
+			p.small.soft 平均时长(天)
+			p.attr-time-val 15
+
+	// 标签
+	div.tags-wrap
+		span.tags-title 印象标签
+			button.tags-btn
+				img(src="../images/loop.png")
+				span.soft 换一批
+
+		ul.tags
+			li.tags-item(style="background: #FFCF06") 美女+123
+			li.tags-item(style="background: #A9E071") 心灵美丽+123
+			li.tags-item(style="background: #5FDDCD") 服务贴心用心+123
+			li.tags-item(style="background: #FCAB52") 完美女神+123
+			li.tags-item(style="background: #a5a3e7") 积极阳光+123
+
+	// 底部导航
+	ul.ft
+		li.ft-item
+			a(href="#") 通讯录
+		li.ft-item
+			a(href="#") 数据统计
+
+
+block ftQuote
+	script(src="../js/index.js")
