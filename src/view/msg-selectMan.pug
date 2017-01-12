@@ -1,0 +1,91 @@
+extends ../components/layout.pug
+
+block title
+	title 选择联系人
+
+block hdQuote
+	link(rel="stylesheet", href="../css/addressBook.styl")
+
+block ctn
+	// 头部
+	.header
+		button.classes-btn 
+			span.classes-des 全部
+			img.header-icon(src="../images/arrow-bottom.png")
+		ul.classes
+			// data-id 必填
+			li.classes-item(data-id="0") 全部
+			li.classes-item(data-id="1") 流动人口
+			li.classes-item(data-id="2") 常住人口
+			li.classes-item(data-id="3") 老年人
+			li.classes-item(data-id="4") 低保户
+			li.classes-item(data-id="5") 特困户
+			li.classes-item(data-id="6") 重点关注
+		button.selectAll 全选
+	
+	// 搜索
+	form.search
+		div.flex.search-wrap
+			input.search-input(placeholder="输入姓名、姓名简称、手机号码查找")
+			button
+				img.search-icon(src="../images/icon-search.png")
+
+	// 用户列表
+	ul.users
+		li.users-item.selected(data-id="1")
+			div.flex.aic
+				div
+					img.users-item-avatar(src="../images/avatar.png")
+				div.users-item-info
+					p.users-item-name 成军
+					p.soft 云智社区
+				div.users-item-identify.soft
+					p 第三网格
+					p 梦想小区1栋2单元
+				div.selectUser
+					img.selectUser-icon(src="../images/success.png")
+					span.selectUser-shade
+		li.users-item(data-id="2")
+			div.flex.aic
+				div
+					img.users-item-avatar(src="../images/avatar.png")
+				div.users-item-info
+					p.users-item-name 成军
+					p.soft 云智社区
+				div.users-item-identify.soft
+					p 第三网格
+					p 梦想小区1栋2单元
+				div.selectUser
+					img.selectUser-icon(src="../images/success.png")
+					span.selectUser-shade
+
+		li.users-item(data-id="3")
+			div.flex.aic
+				div
+					img.users-item-avatar(src="../images/avatar.png")
+				div.users-item-info
+					p.users-item-name 成军
+					p.soft 云智社区
+				div.users-item-identify.soft
+					p 第三网格
+					p 梦想小区1栋2单元
+				div.selectUser
+					img.selectUser-icon(src="../images/success.png")
+					span.selectUser-shade
+
+		a(href="#").selectSuccess 确定
+
+
+block ftQuote
+	script(src="../js/addressBook.js")
+	script.
+		// 下拉框
+		classes.on('custom:tap', function (e, id) {
+			// 逻辑写这里
+			alert(`你点的项id是${id}`)
+		})
+
+		// 选择联系人
+		// console.log(selectMan())
+		// return  Zepto对象  所有选中的列表项的集合
+		// 类似 $('.users-item.selected')

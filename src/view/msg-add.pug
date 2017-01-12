@@ -1,0 +1,37 @@
+extends ../components/layout.pug
+
+block title
+	title 创建消息
+
+block hdQuote
+	link(rel="stylesheet", href="../css/msg-detail-add.styl")
+
+block ctn
+
+	div.wrap
+		// 详情页表单控件添加disabled属性禁止操作
+		// 新建页表单控件删除disabled属性允许操作
+		form
+			div.relative
+				p.small.soft.mb10 消息类型
+				select.select.box
+					option(val="0") 请选择
+					option(val="1") 活动通知
+					option(val="2") 系统通知
+					option(val="3") 呵呵通知
+				img.trigon.trigon-down(src="../images/trigon-down.png")
+			div
+				p.small.soft.mb10 标题
+				input.box
+
+			div
+				p.small.soft.mb10 详情
+				textarea.text.box
+
+			div
+				p.small.soft.mb10 选择接收人 <span class="orange">(共135人)</span>
+				a(href="#").selectMan.box.relative 选择联系人
+					img.trigon.trigon-right(src="../images/trigon-right.png")
+
+			div.submitWrap
+				input.submit(type="submit" value="发布")

@@ -1,0 +1,33 @@
+extends ../components/layout.pug
+
+block title
+	title 消息详情
+
+block hdQuote
+	link(rel="stylesheet", href="../css/msg-detail-add.styl")
+
+block ctn
+
+	div.wrap
+		// 详情页表单控件添加disabled属性禁止操作
+		// 新建页表单控件删除disabled属性允许操作
+		form
+			div.relative
+				p.small.soft.mb10 消息类型
+				select.select.box(disabled)
+					option(val="0") 请选择
+					option(val="1") 活动通知
+					option(val="2" selected) 系统通知
+					option(val="3") 呵呵通知
+				img.trigon.trigon-down(src="../images/trigon-down.png")
+			div
+				p.small.soft.mb10 标题
+				input.box(value="多冷啊！我在东北玩泥巴" disabled)
+
+			div
+				p.small.soft.mb10 详情
+				textarea.text.box(disabled) 多冷啊！我在东北玩泥巴多冷啊！我在东北玩泥巴多冷啊！我在东北玩泥巴多冷啊！我在东北玩泥巴多冷啊！我在东北玩泥巴多冷啊！我在东北玩泥巴多冷啊！我在东北玩泥巴多冷啊！我在东北玩泥巴多冷啊！我在东北玩泥巴多冷啊！我在东北玩泥巴多冷啊！我在东北玩泥巴多冷啊！我在东北玩泥巴多冷啊！我在东北玩泥巴多冷啊！我在东北玩泥巴
+
+			div
+				p.small.soft.mb10 选择接收人 <span class="orange">(共135人)</span>
+				div.box 张三, 李四, 王五, 张三, 李四, 王五, 张三, 李四, 王五, 张三, 李四, 王五, 张三, 李四, 王五, 张三, 李四, 王五 ...

@@ -19,3 +19,34 @@ var classes = () => {
 
 	return event
 }()
+
+
+// 选择联系人
+var selectMan = () => {
+	const btn = $('.selectAll')
+	const wrap = $('.users')
+	const items = $('.users-item')
+
+	if (!btn.length) {return}
+
+	document.body.style.paddingBottom = 60 + 'px'
+
+	wrap.on('tap', e => {
+		$(e.target).parents('.users-item').toggleClass('selected')
+	})
+
+	btn.on('tap', e => {
+		var that = $(e.target)
+		if (that.hasClass('all')) {
+			that.removeClass('all')
+			items.removeClass('selected')
+		} else {
+			that.addClass('all')
+			items.addClass('selected')
+		}
+	})
+
+	return () => {
+		return items.filter('.selected')
+	}
+}()
