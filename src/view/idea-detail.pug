@@ -1,0 +1,25 @@
+extends ../components/layout.pug
+
+block title
+	title 意见列表
+
+block hdQuote
+	link(rel="stylesheet", href="../css/idea.styl")
+
+block ctn
+	div.wrap
+		form
+
+			div
+				p.small.soft.mb10 意见反馈
+				div.relative
+					select.select.box(disabled)
+						option(val="0") 请选择
+						option(val="1" selected) 扫码问题
+					img.trigon.trigon-down(src="../images/trigon-down.png")
+			div
+				p.small.soft.mb10 标题
+				input.box(value="二维码扫描不成功便成仁者无敌敌畏" disabled)
+			div
+				p.small.soft.mb10 任务标题
+				textarea.textarea.box(disabled) 恍恍惚惚红红火火哈哈

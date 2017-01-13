@@ -16,13 +16,14 @@ a
 	&:hover
 		color inherit
 
-select
 input
+select
 textarea
 	-webkit-appearance none
 	&[disabled]
-		opacity 1
-		// -webkit-text-fill-color #333
+		opacity 1 // remove ios default style
+		-webkit-text-fill-color #333
+		color #333
 
 // layout
 .flex
@@ -33,6 +34,11 @@ textarea
 	align-items baseline
 .aic
 	align-items center
+.jcc
+	justify-content center
+	
+.relative
+	position relative
 
 // font
 .small
@@ -55,3 +61,16 @@ textarea
 	margin-bottom auto
 .mlauto
 	margin-left auto
+
+
+// components
+.trigon
+	position absolute
+	right 10px
+	bottom 14px
+
+	&-down
+		width 13px
+		
+	&-right
+		width 8px

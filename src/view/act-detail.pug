@@ -18,10 +18,22 @@ block ctn
 				input.box(value="弱势群体关怀" disabled)
 			div
 				p.small.soft.mb10 服务人群
-				input.box(value="残疾人" disabled)
+				div.relative
+					select.select.box(disabled)
+						option(val="0") 请选择
+						option(val="1") 活动通知
+						option(val="2" selected) 系统通知
+						option(val="3") 呵呵通知
+					img.trigon.trigon-down(src="../images/trigon-down.png")
 			div
 				p.small.soft.mb10 数量(人)
-				input.box(value="20" disabled)
+				div.relative
+					select.select.box(disabled)
+						option(val="0") 请选择
+						option(val="1") 活动通知
+						option(val="2" selected) 系统通知
+						option(val="3") 呵呵通知
+					img.trigon.trigon-down(src="../images/trigon-down.png")
 			div
 				p.small.soft.mb10 详情
 				textarea.textarea.box 吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦不
@@ -35,7 +47,6 @@ block ctn
 						li.prize-item
 							img.prize-item-img(src="../images/icon02.png")
 							p.prize-item-p 商业推广场地
-
 
 			div
 				p.small.soft.mb10 任务状态

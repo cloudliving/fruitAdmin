@@ -1,0 +1,27 @@
+extends ../components/layout.pug
+
+block title
+	title 意见列表
+
+block hdQuote
+	link(rel="stylesheet", href="../css/idea.styl")
+
+block ctn
+	div.wrap
+		form
+
+			div
+				p.small.soft.mb10 意见反馈
+				div.relative
+					select.select.box
+						option(val="0") 请选择
+						option(val="1") 扫码问题
+					img.trigon.trigon-down(src="../images/trigon-down.png")
+			div
+				p.small.soft.mb10 标题
+				input.box
+			div
+				p.small.soft.mb10 任务标题
+				textarea.textarea.box
+			div
+				input.submit(type="submit" value="提交任务")

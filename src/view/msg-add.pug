@@ -12,14 +12,15 @@ block ctn
 		// 详情页表单控件添加disabled属性禁止操作
 		// 新建页表单控件删除disabled属性允许操作
 		form
-			div.relative
+			div
 				p.small.soft.mb10 消息类型
-				select.select.box
-					option(val="0") 请选择
-					option(val="1") 活动通知
-					option(val="2") 系统通知
-					option(val="3") 呵呵通知
-				img.trigon.trigon-down(src="../images/trigon-down.png")
+				div.relative
+					select.select.box
+						option(val="0") 请选择
+						option(val="1") 活动通知
+						option(val="2") 系统通知
+						option(val="3") 呵呵通知
+					img.trigon.trigon-down(src="../images/trigon-down.png")
 			div
 				p.small.soft.mb10 标题
 				input.box

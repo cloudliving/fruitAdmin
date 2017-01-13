@@ -1,0 +1,58 @@
+extends ../components/layout.pug
+
+block title
+	title 数据统计
+
+block hdQuote
+	link(rel="stylesheet", href="../css/statis.styl")
+
+block ctn
+
+	.bg-gray.pd80.tac
+		p.small.mb80 您是云智社区第20网格管理人员
+		div.flex.mb80
+			div.flex-1
+				span.circle.circle-1.mb5
+				p.small.soft.mb5 应有居民
+				p.big 1435
+			div.flex-1
+				span.circle.circle-2.mb5
+				p.small.soft.mb5 应有居民
+				p.big 1435
+		div.flex.mb80.pd-20-level
+			div.bar-1.bg-green(style="width: 32%")
+			div.bar-1.bg-yellow(style="width: 38%")
+			div.bar-1.bg-fff(style="width: 30%")
+		div.flex.jcc.small
+			div.mr20.flex.aic
+				span.block.bg-green
+				span 男-32%
+			div.mr20.flex.aic
+				span.block.bg-yellow
+				span 女-38%
+			div.flex.aic
+				span.block.bg-fff
+				span 未知-30%
+
+	// 个人数据
+	div.tac.pd80
+		p.small.mb80 个人数据
+
+		div.flex.mb80
+			div.flex-1
+				p.big 118
+				p.small.soft 发布任务
+				p.bar-2.bg-green-1
+			div.flex-1
+				p.big 118
+				p.small.soft 发布任务
+				p.bar-2.bg-violet
+		div.flex.mb80
+			div.flex-1
+				p.big 118
+				p.small.soft 发布任务
+				p.bar-2.bg-violet-1
+			div.flex-1
+				p.big 118
+				p.small.soft 发布任务
+				p.bar-2.bg-orange-1
