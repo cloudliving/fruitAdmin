@@ -1,0 +1,55 @@
+extends ../components/layout.pug
+
+block title
+	title 消息管理
+
+block hdQuote
+	link(rel="stylesheet", href="../css/act.styl")
+
+block ctn
+
+	div.wrap
+		form
+			div
+				p.small.soft.mb10 任务标题
+				input.box(value="云志社区行动" disabled)
+			div
+				p.small.soft.mb10 任务类型
+				input.box(value="弱势群体关怀" disabled)
+			div
+				p.small.soft.mb10 服务人群
+				input.box(value="残疾人" disabled)
+			div
+				p.small.soft.mb10 数量(人)
+				input.box(value="20" disabled)
+			div
+				p.small.soft.mb10 详情
+				textarea.textarea.box 吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦不
+			div
+				p.small.soft.mb10 共建奖励
+				div.box
+					ul.prize
+						li.prize-item
+							img.prize-item-img(src="../images/icon01.png")
+							p.prize-item-p 体验课x2
+						li.prize-item
+							img.prize-item-img(src="../images/icon02.png")
+							p.prize-item-p 商业推广场地
+
+
+			div
+				p.small.soft.mb10 任务状态
+				div.box
+					p 用户: 
+						span.green 王大锤 
+						| 创建了任务
+					p 用户: 
+						span.green 王大锤 
+						| 发布了任务
+					p 用户: 
+						span.green 王大锤 
+						| 接受了任务
+					p 用户: 
+						span.green 王大锤 
+						| 验收了任务
+					p 任务完成

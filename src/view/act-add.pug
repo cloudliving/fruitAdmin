@@ -1,0 +1,105 @@
+extends ../components/layout.pug
+
+block title
+	title 消息管理
+
+block hdQuote
+	link(rel="stylesheet", href="../css/act.styl")
+
+block ctn
+	#app
+		div.wrap
+			form
+				div
+					p.small.soft.mb10 任务标题
+					input.box
+				div
+					p.small.soft.mb10 任务类型
+					input.box
+				div
+					p.small.soft.mb10 服务人群
+					input.box
+				div
+					p.small.soft.mb10 数量(人)
+					input.box
+				div
+					p.small.soft.mb10 详情
+					textarea.textarea.box
+				div
+					p.small.soft.mb10 共建奖励
+					div.box
+						ul.prize
+							li.prize-item(v-for="item in selected")
+								img.prize-item-img(:src="item.imgUrl")
+								p.prize-item-p {{item.name}}x{{item.count}}
+							li.prize-item(@tap="showPanel")
+								img.prize-item-img(src="../images/add.png")
+								p.prize-item-p 添加奖励
+				div
+					input.submit(type="submit" value="提交任务")
+
+		.selectPrize(v-show="show")
+			p.selectPrize-msg 共有奖励6项, 可选择多项
+			ul.selectPrize-list
+				li.selectPrize-list-item(v-for="(item,index) in prize")
+					img.selectPrize-list-item-thumb(:src="item.imgUrl")
+					p.selectPrize-list-item-name {{item.name}}
+					div.selectPrize-count
+						button.selectPrize-count-reduce(@tap="reduce(index)") －
+						span.selectPrize-count-val {{item.count}}
+						button.selectPrize-count-add(@tap="add(index)") +
+
+			div.selectPrize-btn-wrap
+				a.selectPrize-btn(@tap="hidePanel") 选定
+
+
+
+
+block ftQuote
+	script(src="../lib/vue.min.js")
+	script.
+		var prize = [
+			{id: 1, count: 0, name: '体验课', imgUrl: 'http://cloudliving-img.b0.upaiyun.com/static/Home/fruitAdmin/images/icon01.png'},
+			{id: 2, count: 0, name: '地推场地', imgUrl: 'http://cloudliving-img.b0.upaiyun.com/static/Home/fruitAdmin/images/icon02.png'},
+			{id: 3, count: 0, name: '宣传栏', imgUrl: 'http://cloudliving-img.b0.upaiyun.com/static/Home/fruitAdmin/images/icon03.png'},
+			{id: 4, count: 0, name: '软文推送', imgUrl: 'http://cloudliving-img.b0.upaiyun.com/static/Home/fruitAdmin/images/icon04.png'},
+			{id: 5, count: 0, name: '公益勋章', imgUrl: 'http://cloudliving-img.b0.upaiyun.com/static/Home/fruitAdmin/images/icon05.png'},
+			{id: 6, count: 0, name: '惠民物资采购', imgUrl: 'http://cloudliving-img.b0.upaiyun.com/static/Home/fruitAdmin/images/icon06.png'}
+		]	
+
+
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				prize: prize,
+				show: false,
+				selected: []
+			},
+			methods: {
+				reduce: function (index) {
+					var cur = this.prize[index]
+
+					if (cur.count > 0) {
+						--cur.count === 0 && (cur.selected = false)
+					}
+				},
+				add: function (index) {
+					this.prize[index].count ++
+					this.prize[index].selected = true
+				},
+				showPanel: function () {
+					this.show = true
+				},
+				hidePanel: function () {
+					this.show = false
+
+					this.selected = this.prize.filter(function(el){
+						return !!el.selected
+					})
+				}
+			}
+		})
+
+		// vm.selected
+		// return Array
+		// 奖品对象的集合

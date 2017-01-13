@@ -9,7 +9,6 @@ tags()
 		color #fff
 		margin 0 .3rem .3rem 0
 
-
 users()
 	.users-item
 		padding .3rem .25rem
@@ -26,3 +25,23 @@ users()
 
 		&-identify
 			flex 3
+
+textOverflow(num)
+	overflow hidden
+	text-overflow ellipsis
+	display -webkit-box
+	-webkit-box-orient vertical
+	-webkit-line-clamp num
+
+fixed()
+	position fixed
+	width 100%
+
+btn(height)
+	display block
+	width 100%
+	height height
+	line-height height
+	text-align center
+	border-radius 4px
+	color #fff

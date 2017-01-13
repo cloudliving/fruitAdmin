@@ -1,0 +1,40 @@
+extends ../components/layout.pug
+
+block title
+	title 消息管理
+
+block hdQuote
+	link(rel="stylesheet", href="../css/act.styl")
+
+block ctn
+	// 搜索
+	form.search
+		div.flex.search-wrap
+			input.search-input(placeholder="搜索任务")
+			button
+				img.search-icon(src="../images/icon-search.png")
+
+	ul.actList
+		li.actList-item
+			a(href="#")
+				div
+					p.actList-item-title 多冷啊多冷啊多冷啊多冷啊多冷啊多冷啊多冷啊
+					p.actList-item-intro 我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴
+					p.actList-item-date 2016.12.20
+					p.actList-item-status.status-1 进行中
+		li.actList-item
+			a(href="#")
+				div
+					p.actList-item-title 多冷啊多冷啊多冷啊多冷啊多冷啊多冷啊多冷啊
+					p.actList-item-intro 我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴
+					p.actList-item-date 2016.12.20
+					p.actList-item-status.status-1 进行中
+		li.actList-item
+			a(href="#")
+				div
+					p.actList-item-title 多冷啊多冷啊多冷啊多冷啊多冷啊多冷啊多冷啊
+					p.actList-item-intro 我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴我在东北玩泥巴
+					p.actList-item-date 2016.12.20
+					p.actList-item-status.status-1 进行中
+
+		a.create(href="#") 新建活动
